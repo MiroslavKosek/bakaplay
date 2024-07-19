@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1062183347607",
+    "project_id": "lobotony-96977",
+    "storage_bucket": "lobotony-96977.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062183347607:android:9404a42e340af5089350d2",
+        "android_client_info": {
+          "package_name": "com.bakaplay.bakaplay"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2yD0X7bgT-Fj4gRVtNflKYY-cGt_4Y4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
