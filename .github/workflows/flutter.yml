@@ -14,7 +14,7 @@ jobs:
   #   name: Test
   #   runs-on: ubuntu-latest
   #   steps:
-  #     - uses: actions/checkout@v2
+  #     - uses: actions/checkout@v4
 
   #     - name: Set up Flutter
   #       uses: subosito/flutter-action@v2
@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     # needs: [test]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
@@ -49,13 +49,13 @@ jobs:
         run: flutter build appbundle --release
 
       - name: Upload APK as Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
 
       - name: Upload AppBundle as Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: release-aab
           path: build/app/outputs/bundle/release/app-release.aab
@@ -65,7 +65,7 @@ jobs:
     runs-on: macos-latest
     # needs: [test]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
@@ -79,7 +79,7 @@ jobs:
         run: flutter build ios --release --no-codesign
 
       - name: Upload iOS Build as Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: release-ios
           path: build/ios/iphoneos
@@ -89,7 +89,7 @@ jobs:
     runs-on: ubuntu-latest
     # needs: [test]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
@@ -103,7 +103,7 @@ jobs:
         run: flutter build web --release
 
       - name: Upload Web Build as Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: release-web
           path: build/web
@@ -113,7 +113,7 @@ jobs:
   #   runs-on: ubuntu-latest
   #   needs: [build_android, build_ios, build_web]
   #   steps:
-  #     - uses: actions/checkout@v2
+  #     - uses: actions/checkout@v4
 
   #     - name: Download APK Artifact
   #       uses: actions/download-artifact@v2
@@ -153,7 +153,7 @@ jobs:
   #   runs-on: ubuntu-latest
   #   needs: [build_web]
   #   steps:
-  #     - uses: actions/checkout@v2
+  #     - uses: actions/checkout@v4
 
   #     - name: Download Web Build Artifact
   #       uses: actions/download-artifact@v2
@@ -172,7 +172,7 @@ jobs:
   #   runs-on: ubuntu-latest
   #   needs: [build]
   #   steps:
-  #     - uses: actions/checkout@v2
+  #     - uses: actions/checkout@v4
 
   #     - name: Set up Flutter
   #       uses: subosito/flutter-action@v2
