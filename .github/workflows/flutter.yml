@@ -75,9 +75,6 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-      - name: Set up Xcode
-        run: sudo xcode-select --switch /Applications/Xcode_12.4.app
-
       - name: Build iOS
         run: flutter build ios --release --no-codesign
 
