@@ -135,18 +135,20 @@ jobs:
 
   #     - name: Create GitHub Release
   #       id: create_release
-  #       uses: actions/create-release@v1
-  #       env:
-  #         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-  #       with:
-  #         tag_name: v${{ github.run_number }}
-  #         release_name: Release ${{ github.run_number }}
-  #         draft: false
-  #         prerelease: false
-  #         files: |
-  #           app-release.apk
-  #           app-release.aab
-  #           build/ios/iphoneos/*.app
+  #       uses: ncipollo/release-action@v1
+  #        with:
+  #          tag: v${{ github.run_number }}
+  #          name: Release ${{ github.run_number }}
+  #          body: |
+  #            ## Changes
+  #            - New release
+  #          draft: false
+  #          prerelease: false
+  #          artifacts: |
+  #            app-release.apk
+  #            app-release.aab
+  #            build/ios/iphoneos/*.app
+  #          token: ${{ secrets.GITHUB_TOKEN }}
 
   # deploy_web:
   #   name: Deploy Web to GitHub Pages
