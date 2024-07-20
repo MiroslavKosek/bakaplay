@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "lobotony" "\0"
+            VALUE "FileDescription", "bakaplay" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "lobotony" "\0"
+            VALUE "InternalName", "bakaplay" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "lobotony.exe" "\0"
-            VALUE "ProductName", "lobotony" "\0"
+            VALUE "OriginalFilename", "bakaplay.exe" "\0"
+            VALUE "ProductName", "bakaplay" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

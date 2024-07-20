@@ -1,4 +1,4 @@
-package com.example.lobotony
+package com.bakaplay.bakaplay
 
 import io.flutter.embedding.android.FlutterActivity
 
