@@ -75,6 +75,19 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
+    - name: Generate Podfile and update deployment target
+      run: |
+        flutter build ios --release --no-codesign || true
+        echo "platform :ios, '13.0'" > ios/Podfile
+        echo "target 'Runner' do" >> ios/Podfile
+        echo "  use_frameworks!" >> ios/Podfile
+        echo "  use_modular_headers!" >> ios/Podfile
+        echo "  flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))" >> ios/Podfile
+        echo "end" >> ios/Podfile
+        cd ios
+        pod install
+        cd ..
+
       - name: Build iOS
         run: flutter build ios --release --no-codesign
 
