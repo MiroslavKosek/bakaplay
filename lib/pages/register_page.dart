@@ -3,8 +3,8 @@
 import 'package:bakaplay/service/auth.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:bakaplay/components/my_button.dart';
-import 'package:bakaplay/components/my_textfield.dart';
+import 'package:bakaplay/components/button.dart';
+import 'package:bakaplay/components/textfield.dart';
 import 'package:bakaplay/components/square_tile.dart';
 import 'package:bakaplay/service/database.dart';
 
@@ -228,10 +228,6 @@ class _RegisterPageState extends State<RegisterPage> {
                         child: SquareTile(imagePath: 'lib/images/google.png'),
                       ),
                     ),
-
-                    const SizedBox(width: 25),
-                    
-                    const SquareTile(imagePath: 'lib/images/apple.png'),
                   ],
                 ),
 

@@ -3,8 +3,8 @@
 import 'package:bakaplay/service/auth.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:bakaplay/components/my_button.dart';
-import 'package:bakaplay/components/my_textfield.dart';
+import 'package:bakaplay/components/button.dart';
+import 'package:bakaplay/components/textfield.dart';
 import 'package:bakaplay/components/square_tile.dart';
 
 class LoginPage extends StatefulWidget {
@@ -187,10 +187,6 @@ class _LoginPageState extends State<LoginPage> {
                         child: SquareTile(imagePath: 'lib/images/google.png'),
                       ),
                     ),
-
-                    const SizedBox(width: 25),
-                    
-                    const SquareTile(imagePath: 'lib/images/apple.png'),
                   ],
                 ),
 

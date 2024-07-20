@@ -2,8 +2,8 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:bakaplay/components/my_button.dart';
-import 'package:bakaplay/components/my_textfield.dart';
+import 'package:bakaplay/components/button.dart';
+import 'package:bakaplay/components/textfield.dart';
 
 class ForgotPasswordPage extends StatefulWidget {
   final Function()? onLoginTap;
