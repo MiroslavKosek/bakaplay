@@ -1,3 +1,4 @@
+import 'package:bakaplay/components/theme_switch_tile.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -33,11 +34,17 @@ class HomePage extends StatelessWidget {
               "LOGGED IN",
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Theme.of(context).colorScheme.onSurface),
             ),
+            
             const SizedBox(height: 10),
+
             Text(
               user.email!,
               style: TextStyle(fontSize: 20, color: Theme.of(context).colorScheme.onSurface),
             ),
+
+            const SizedBox(height: 10),
+
+            const ThemeSwitchTile()
           ],
         ),
       ),
