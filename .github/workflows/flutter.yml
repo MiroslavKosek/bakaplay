@@ -75,15 +75,27 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-    - name: Generate Podfile and update deployment target
+    - name: Generate Podfile if missing
       run: |
-        flutter build ios --release --no-codesign || true
-        echo "platform :ios, '13.0'" > ios/Podfile
-        echo "target 'Runner' do" >> ios/Podfile
-        echo "  use_frameworks!" >> ios/Podfile
-        echo "  use_modular_headers!" >> ios/Podfile
-        echo "  flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))" >> ios/Podfile
-        echo "end" >> ios/Podfile
+        if [ ! -f ios/Podfile ]; then
+          flutter build ios --release --no-codesign || true
+        fi
+
+    - name: Update Podfile deployment target
+      run: |
+        if ! grep -q "platform :ios, '13.0'" ios/Podfile; then
+          echo "Updating Podfile with minimum iOS deployment target of 13.0"
+          echo "platform :ios, '13.0'" > ios/Podfile.new
+          echo "target 'Runner' do" >> ios/Podfile.new
+          echo "  use_frameworks!" >> ios/Podfile.new
+          echo "  use_modular_headers!" >> ios/Podfile.new
+          echo "  flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))" >> ios/Podfile.new
+          echo "end" >> ios/Podfile.new
+          mv ios/Podfile.new ios/Podfile
+        fi
+
+    - name: Install CocoaPods
+      run: |
         cd ios
         pod install
         cd ..
