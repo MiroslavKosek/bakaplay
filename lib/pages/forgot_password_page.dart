@@ -52,11 +52,11 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          backgroundColor: Colors.green,
+          backgroundColor: Theme.of(context).colorScheme.primary,
           title: Center(
             child: Text(
               message,
-              style: const TextStyle(color: Colors.white),
+              style: TextStyle(color: Theme.of(context).colorScheme.onPrimary),
             ),
           ),
         );
@@ -70,11 +70,11 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          backgroundColor: Colors.deepPurple,
+          backgroundColor: Theme.of(context).colorScheme.tertiary,
           title: Center(
             child: Text(
               message,
-              style: const TextStyle(color: Colors.white),
+              style: TextStyle(color: Theme.of(context).colorScheme.onSurface),
             ),
           ),
         );
@@ -85,7 +85,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -104,7 +104,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                 Text(
                   'Password Recovery',
                   style: TextStyle(
-                    color: Colors.grey[700],
+                    color: Theme.of(context).colorScheme.onSurface,
                     fontSize: 16,
                   ),
                 ),
@@ -134,17 +134,17 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                   children: [
                     Text(
                       'Do you want to return?',
-                      style: TextStyle(color: Colors.grey[700]),
+                      style: TextStyle(color: Theme.of(context).colorScheme.onSurface),
                     ),
                     const SizedBox(width: 4),
                     MouseRegion(
                       cursor: SystemMouseCursors.click,
                       child: GestureDetector(
                         onTap: widget.onLoginTap,
-                        child: const Text(
+                        child: Text(
                           'Back',
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Theme.of(context).colorScheme.primary,
                             fontWeight: FontWeight.bold,
                           ),
                         ),

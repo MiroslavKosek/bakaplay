@@ -55,11 +55,11 @@ class _LoginPageState extends State<LoginPage> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          backgroundColor: Colors.deepPurple,
+          backgroundColor: Theme.of(context).colorScheme.tertiary,
           title: Center(
             child: Text(
               message,
-              style: const TextStyle(color: Colors.white),
+              style: TextStyle(color: Theme.of(context).colorScheme.onSurface),
             ),
           ),
         );
@@ -70,7 +70,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -89,7 +89,7 @@ class _LoginPageState extends State<LoginPage> {
                 Text(
                   'Welcome back you\'ve been missed!',
                   style: TextStyle(
-                    color: Colors.grey[700],
+                    color: Theme.of(context).colorScheme.onSurface,
                     fontSize: 16,
                   ),
                 ),
@@ -126,7 +126,7 @@ class _LoginPageState extends State<LoginPage> {
                           onTap: widget.onForgotPasswordTap,
                           child: Text(
                             'Forgot Password?',
-                            style: TextStyle(color: Colors.grey[600]),
+                            style: TextStyle(color: Theme.of(context).colorScheme.onSurface),
                           ),
                         ),
                       )
@@ -152,20 +152,20 @@ class _LoginPageState extends State<LoginPage> {
                       Expanded(
                         child: Divider(
                           thickness: 0.5,
-                          color: Colors.grey[400],
+                          color: Theme.of(context).colorScheme.onSurface,
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10.0),
                         child: Text(
                           'Or continue with',
-                          style: TextStyle(color: Colors.grey[700]),
+                          style: TextStyle(color: Theme.of(context).colorScheme.onSurface),
                         ),
                       ),
                       Expanded(
                         child: Divider(
                           thickness: 0.5,
-                          color: Colors.grey[400],
+                          color: Theme.of(context).colorScheme.onSurface,
                         ),
                       ),
                     ],
@@ -174,7 +174,7 @@ class _LoginPageState extends State<LoginPage> {
 
                 const SizedBox(height: 25),
 
-                // google + apple sign in buttons
+                // google sign in button
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -198,17 +198,17 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     Text(
                       'Not a member?',
-                      style: TextStyle(color: Colors.grey[700]),
+                      style: TextStyle(color: Theme.of(context).colorScheme.onSurface),
                     ),
                     const SizedBox(width: 4),
                     MouseRegion(
                       cursor: SystemMouseCursors.click,
                       child: GestureDetector(
                         onTap: widget.onRegisterTap,
-                        child: const Text(
+                        child: Text(
                           'Register now',
                           style: TextStyle(
-                            color: Colors.blue,
+                            color: Theme.of(context).colorScheme.primary,
                             fontWeight: FontWeight.bold,
                           ),
                         ),

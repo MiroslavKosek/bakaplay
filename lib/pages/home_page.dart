@@ -14,14 +14,14 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
-        backgroundColor: Colors.grey[900],
+        backgroundColor: Theme.of(context).colorScheme.surface,
         actions: [
           IconButton(
             onPressed: signUserOut,
             icon: const Icon(Icons.logout),
-            color: Colors.grey[300],
+            color: Theme.of(context).colorScheme.onSurface,
           )
         ],
       ),
@@ -29,14 +29,14 @@ class HomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
+            Text(
               "LOGGED IN",
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Theme.of(context).colorScheme.onSurface),
             ),
             const SizedBox(height: 10),
             Text(
               user.email!,
-              style: const TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 20, color: Theme.of(context).colorScheme.onSurface),
             ),
           ],
         ),
