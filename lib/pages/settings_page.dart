@@ -1,15 +1,15 @@
+import 'package:bakaplay/components/theme_switch_tile.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class SettingsPage extends StatelessWidget {
+  const SettingsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-  return Scaffold(
+    return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
-        title: const Text("Home"),
-        backgroundColor: Theme.of(context).colorScheme.surface,
+        title: const Text("Settings"),
       ),
       body: Column(
         mainAxisSize: MainAxisSize.min,
@@ -20,9 +20,11 @@ class HomePage extends StatelessWidget {
           ),
           const SizedBox(height: 5),
           const Center(
-            child: Text(
-              "Home Page",
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ThemeSwitchTile(),
+              ],
             ),
           ),
         ],

@@ -1,15 +1,27 @@
+import 'package:bakaplay/pages/settings_page.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-  return Scaffold(
+    return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
-        title: const Text("Home"),
+        title: const Text("Profile"),
         backgroundColor: Theme.of(context).colorScheme.surface,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.settings, size: 30),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SettingsPage()),
+              );
+            },
+          ),
+        ],
       ),
       body: Column(
         mainAxisSize: MainAxisSize.min,
@@ -21,7 +33,7 @@ class HomePage extends StatelessWidget {
           const SizedBox(height: 5),
           const Center(
             child: Text(
-              "Home Page",
+              "Profile Page",
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
           ),

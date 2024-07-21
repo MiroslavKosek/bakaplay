@@ -2,7 +2,7 @@ import 'package:bakaplay/theme/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-// Your ListTile with theme switch
+// ListTile with theme switch
 class ThemeSwitchTile extends StatelessWidget {
   const ThemeSwitchTile({super.key});
 
