@@ -31,9 +31,18 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
       body: _pages[_selectedIndex],
-      bottomNavigationBar: Navbar(
-        selectedIndex: _selectedIndex,
-        onTabSelected: _onTabSelected,
+      bottomNavigationBar: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Divider(
+            height: 1,
+            color: Theme.of(context).colorScheme.onSurface,
+          ),
+          Navbar(
+            selectedIndex: _selectedIndex,
+            onTabSelected: _onTabSelected,
+          ),
+        ],
       ),
     );
   }

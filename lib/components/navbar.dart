@@ -15,12 +15,12 @@ class Navbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GNav(
-      backgroundColor: Colors.black,
-      color: Theme.of(context).colorScheme.primary,
+      backgroundColor: Theme.of(context).colorScheme.surface,
+      color: Theme.of(context).colorScheme.onSurface,
       haptic: true,
       gap: 8,
-      activeColor: Theme.of(context).colorScheme.primary,
-      tabBackgroundColor: Colors.grey.shade800,
+      activeColor: Theme.of(context).colorScheme.surface,
+      tabBackgroundColor: Theme.of(context).colorScheme.primary,
       padding: const EdgeInsets.all(16),
       selectedIndex: selectedIndex,
       onTabChange: onTabSelected,

@@ -13,7 +13,7 @@ class ProfilePage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.surface,
         actions: [
           IconButton(
-            icon: const Icon(Icons.settings),
+            icon: const Icon(Icons.settings, size: 30),
             onPressed: () {
               Navigator.push(
                 context,
@@ -23,11 +23,21 @@ class ProfilePage extends StatelessWidget {
           ),
         ],
       ),
-      body: const Center(
-        child: Text(
-          "Profile Page",
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-        ),
+      body: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Divider(
+            height: 1,
+            color: Theme.of(context).colorScheme.onSurface,
+          ),
+          const SizedBox(height: 5),
+          const Center(
+            child: Text(
+              "Profile Page",
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+          ),
+        ],
       ),
     );
   }

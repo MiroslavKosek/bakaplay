@@ -11,11 +11,21 @@ class HomePage extends StatelessWidget {
         title: const Text("Home"),
         backgroundColor: Theme.of(context).colorScheme.surface,
       ),
-      body: const Center(
-        child: Text(
-          "Home Page",
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-        ),
+      body: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Divider(
+            height: 1,
+            color: Theme.of(context).colorScheme.onSurface,
+          ),
+          const SizedBox(height: 5),
+          const Center(
+            child: Text(
+              "Home Page",
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+          ),
+        ],
       ),
     );
   }
