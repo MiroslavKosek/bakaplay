@@ -3,7 +3,14 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 
 class Navbar extends StatelessWidget {
-  const Navbar({super.key});
+  final int selectedIndex;
+  final ValueChanged<int> onTabSelected;
+
+  const Navbar({
+    required this.selectedIndex,
+    required this.onTabSelected,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +22,8 @@ class Navbar extends StatelessWidget {
       activeColor: Theme.of(context).colorScheme.primary,
       tabBackgroundColor: Colors.grey.shade800,
       padding: const EdgeInsets.all(16),
+      selectedIndex: selectedIndex,
+      onTabChange: onTabSelected,
       tabs: const [
         GButton(
           icon: LineIcons.home,

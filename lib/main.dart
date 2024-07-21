@@ -1,5 +1,5 @@
 //import 'package:bakaplay/pages/auth_page.dart';
-import 'package:bakaplay/pages/home_page.dart';
+import 'package:bakaplay/pages/main_page.dart';
 import 'package:bakaplay/theme/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: Provider.of<ThemeProvider>(context).themeData,
       //home: const AuthPage()
-      home: const HomePage()
+      home: const MainPage()
     );
   }
 }
