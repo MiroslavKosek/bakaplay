@@ -1,3 +1,4 @@
+import 'package:bakaplay/components/navbar.dart';
 import 'package:bakaplay/components/theme_switch_tile.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -48,6 +49,7 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: Navbar(), // Use the Navbar component here
     );
-  }
+  } //test commit
 }
